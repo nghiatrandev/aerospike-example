@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  aerospike:
+    image: aerospike:5.0.0.4
+    ports:
+      - 3000:3000
+    volumes:
+      - ./tmp:/tmp/host_tmp
+      - aerospike_data:/opt/aerospike/data
+
+volumes:
+  aerospike_data:
